@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe7f0">
+<title>Happy Birthday, Lakhi 💗</title>
+<style>
+:root{--pink:#ff6fae;--deep:#d83d83;--cream:#fff8fb;--ink:#5b2942}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:linear-gradient(180deg,#ffeaf2,#fff9fc 48%,#ffe6f0);overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-40px;opacity:.65;animation:floatUp linear infinite;color:#ff72a9;text-shadow:0 0 14px #ffb6d0}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;max-width:850px;margin:auto;padding:20px 16px 60px}
+.hero{text-align:center;padding:62px 18px 42px}
+.pill{display:inline-block;background:#fff9;border:1px solid #ffc2da;border-radius:999px;padding:8px 14px;font-size:.9rem}
+h1{font-size:clamp(2.5rem,10vw,5.1rem);line-height:1.03;margin:22px 0 14px;color:#d83d83;letter-spacing:-.04em}
+h1 span{display:block;color:#ff75ad}
+.subtitle{font-size:1.1rem;max-width:560px;margin:0 auto 24px;line-height:1.7}
+button,.button{border:0;border-radius:999px;background:linear-gradient(135deg,#ff75ad,#dc4388);color:white;font-size:1rem;font-weight:700;padding:14px 22px;box-shadow:0 9px 22px #df4e8a30;cursor:pointer;text-decoration:none;display:inline-block}
+button:focus-visible,a:focus-visible{outline:3px solid #8e2756;outline-offset:4px}
+.section{background:#ffffffc9;border:1px solid #ffd0e1;border-radius:24px;padding:25px;margin:18px 0;box-shadow:0 14px 36px #d94e8610;backdrop-filter:blur(8px)}
+h2{margin:0 0 14px;font-size:1.65rem;color:#c83c7c}
+p{line-height:1.8}
+.letter{font-size:1.04rem;white-space:pre-line}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:18px}
+.timebox{background:#fff0f6;border:1px solid #ffc6dd;border-radius:16px;padding:14px 5px;text-align:center}
+.timebox strong{display:block;font-size:1.65rem;color:#d83d83}
+.timebox span{font-size:.78rem}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.photo{min-height:155px;border:2px dashed #ffafd0;border-radius:18px;background:linear-gradient(135deg,#fff0f7,#ffe0ed);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;overflow:hidden;color:#a33d6e}
+.photo img{width:100%;height:100%;min-height:155px;object-fit:cover;display:block;border-radius:13px}
+.photo input{max-width:100%;font-size:.8rem}
+.note{font-size:.88rem;color:#8b5b70}
+.reveal{display:none;margin-top:18px;padding:22px;border-radius:18px;background:#fff0f6;text-align:center;border:1px solid #ffb8d5}
+.reveal.show{display:block;animation:pop .45s ease-out}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+footer{text-align:center;padding:26px 8px;color:#8d5570}
+.small-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+@media(max-width:480px){.section{padding:20px}.countdown{gap:6px}.timebox strong{font-size:1.3rem}.gallery{grid-template-columns:1fr}.photo{min-height:190px}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<main>
+  <header class="hero">
+    <div class="pill">A little birthday surprise made with love 💌</div>
+    <h1>Happy Birthday,<span>Lakhi 💗</span></h1>
+    <p class="subtitle">Today is a little more beautiful because the world got you. This tiny corner of the internet is just for you.</p>
+    <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open your birthday letter 💌</button>
+  </header>
+
+  <section class="section" aria-labelledby="timer-title">
+    <h2 id="timer-title">Your special day 🎂</h2>
+    <p id="countdown-message">Counting down to your birthday…</p>
+    <div class="countdown" aria-label="Birthday countdown">
+      <div class="timebox"><strong id="days">0</strong><span>Days</span></div>
+      <div class="timebox"><strong id="hours">00</strong><span>Hours</span></div>
+      <div class="timebox"><strong id="minutes">00</strong><span>Minutes</span></div>
+      <div class="timebox"><strong id="seconds">00</strong><span>Seconds</span></div>
+    </div>
+    <p class="note">Birthday date: October 20, 2026. The countdown uses your device's local time.</p>
+  </section>
+
+  <section class="section" id="letter">
+    <h2>A letter from Vishnu to Lakhi 💗</h2>
+    <div class="letter">My dearest Lakhi,
+
+Happy Birthday, my love! 💖
+
+I hope your day is filled with sweet smiles, warm hugs, happy surprises, and all the little things that make your heart glow. You deserve kindness, laughter, and beautiful moments—not just today, but every day.
+
+Thank you for being someone so special in my life. If I could wrap up all my best wishes and give them to you, I would. Until then, let this little website remind you that someone is cheering for you and wishing you the happiest birthday.
+
+May this new year of your life bring you new dreams, lovely memories, and countless reasons to smile.
+
+With all my love,
+Yours,
+Vishnu 💗</div>
+  </section>
+
+  <section class="section">
+    <h2>Our little memory gallery 📸</h2>
+    <p>Add your favorite pictures together. Choose photos from your phone and they'll appear here on this page. (Photos are not uploaded anywhere by this page.)</p>
+    <div class="gallery">
+      <label class="photo" id="slot1"><span>💞 Memory 1<br><small>Tap to add a photo</small></span><input aria-label="Choose memory photo 1" type="file" accept="image/*" onchange="showPhoto(event,'slot1')"></label>
+      <label class="photo" id="slot2"><span>🌷 Memory 2<br><small>Tap to add a photo</small></span><input aria-label="Choose memory photo 2" type="file" accept="image/*" onchange="showPhoto(event,'slot2')"></label>
+      <label class="photo" id="slot3"><span>✨ Memory 3<br><small>Tap to add a photo</small></span><input aria-label="Choose memory photo 3" type="file" accept="image/*" onchange="showPhoto(event,'slot3')"></label>
+      <label class="photo" id="slot4"><span>💖 Memory 4<br><small>Tap to add a photo</small></span><input aria-label="Choose memory photo 4" type="file" accept="image/*" onchange="showPhoto(event,'slot4')"></label>
+    </div>
+    <p class="note">Tip: To include photos for everyone who opens the published link, replace the photo placeholders in the website files before publishing.</p>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <h2>A tiny surprise for you 🎁</h2>
+    <p>There is one more little message waiting just for you.</p>
+    <button id="surpriseButton" onclick="revealSurprise()">Tap for your surprise 💝</button>
+    <div class="reveal" id="surprise">
+      <div style="font-size:2.5rem">🌸💗🌸</div>
+      <h2>One wish, just for you</h2>
+      <p>Lakhi, may you always have a reason to smile, courage to chase your dreams, and people around you who remind you how wonderful you are. Keep shining, birthday girl! ✨</p>
+      <strong>Forever cheering for you — Vishnu 💗</strong>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <h2>A soft little birthday soundtrack 🎵</h2>
+    <p>Choose an audio file from your phone to play while you explore. Browsers require a tap before music can start.</p>
+    <input id="musicFile" type="file" accept="audio/*" aria-label="Choose background music">
+    <div class="small-buttons">
+      <button onclick="toggleMusic()">Play / Pause music 🎶</button>
+    </div>
+    <audio id="music" loop controls style="width:100%;margin-top:14px"></audio>
+    <p class="note">Use a song or audio file you have permission to share. The selected file plays on your device and is not uploaded.</p>
+  </section>
+
+  <footer>
+    Made with a whole lot of love 💗<br>
+    <strong>Vishnu → Lakhi</strong><br>
+    <span class="note">No paid domain. No paid hosting. Just a little love on the internet.</span>
+  </footer>
+</main>
+<script>
+const hearts=document.getElementById('hearts');
+for(let i=0;i<20;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','💗'][i%3];h.style.left=(Math.random()*100)+'%';h.style.animationDuration=(9+Math.random()*12)+'s';h.style.animationDelay=(-Math.random()*18)+'s';h.style.fontSize=(14+Math.random()*22)+'px';hearts.appendChild(h)}
+function updateCountdown(){
+  // Birthday date in the visitor's local timezone.
+  const target=new Date(2026,9,20,0,0,0);
+  const now=new Date();let diff=target-now;
+  if(diff<=0){
+    document.getElementById('countdown-message').textContent='It’s Lakhi’s birthday! Let the celebrations begin! 🎉';
+    document.getElementById('days').textContent='🎂';
+    document.getElementById('hours').textContent='💗';
+    document.getElementById('minutes').textContent='🎉';
+    document.getElementById('seconds').textContent='✨';return;
+  }
+  const d=Math.floor(diff/86400000);diff%=86400000;
+  const h=Math.floor(diff/3600000);diff%=3600000;
+  const m=Math.floor(diff/60000);const s=Math.floor((diff%60000)/1000);
+  document.getElementById('days').textContent=d;
+  document.getElementById('hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('minutes').textContent=String(m).padStart(2,'0');
+  document.getElementById('seconds').textContent=String(s).padStart(2,'0');
+}
+setInterval(updateCountdown,1000);updateCountdown();
+function revealSurprise(){document.getElementById('surprise').classList.toggle('show');document.getElementById('surpriseButton').textContent=document.getElementById('surprise').classList.contains('show')?'Your surprise is open 💗':'Tap for your surprise 💝'}
+function showPhoto(event,id){const file=event.target.files&&event.target.files[0];if(!file)return;const url=URL.createObjectURL(file);const slot=document.getElementById(id);slot.innerHTML='';const img=document.createElement('img');img.src=url;img.alt='Selected memory photo';slot.appendChild(img)}
+const music=document.getElementById('music');
+document.getElementById('musicFile').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(f){music.src=URL.createObjectURL(f);music.play().catch(()=>{});}});
+function toggleMusic(){if(!music.src){document.getElementById('musicFile').click();return;}if(music.paused)music.play().catch(()=>{});else music.pause();}
+</script>
+</body>
+</html>
